@@ -524,7 +524,7 @@ const [buttonTheme, setButtonTheme] = useState(getDefaultButtonTheme());
 </Keyboard>
 ```
 
-You may be noticing that we insert the button theme as text into the component. This is a litte hack which forces the keyboard component to rerender. Usually it won't rerender automatically which is an issue with the keyboard component.
+You may be noticing that we insert the button theme as text into the component. This is a little hack which forces the keyboard component to rerender. Usually it won't rerender automatically which is an issue with the keyboard component.
 
 So now all thats left to do is to update the button theme when enter got pressed. We basically iterate over all characters and add collect the chars in arrays first.
 
