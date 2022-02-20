@@ -12945,5 +12945,5 @@ export default [
   "ZYGAL",
   "ZYGON",
   "ZYMES",
-  "ZYMIC"
-]
+  "ZYMIC",
+];

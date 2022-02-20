@@ -1,6 +1,6 @@
 # Create your own wordle clone in React.js
 
-<img src="tutorial/playing-game.gif" />
+<img src="playing-game.gif" />
 
 In this tutorial you're going to learn some React.js basics by creating the popular game wordle.
 
@@ -49,7 +49,7 @@ As you can see, in react we simply export a function using the `export default` 
 
 We will simply create two new functions. The first one will represent a row and the second one will represent a single cell.
 
-<img src="tutorial/row-and-cell.png" />
+<img src="row-and-cell.png" />
 
 ```js
 function Row() {
@@ -79,16 +79,12 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <div className="App">
-        <div className="wrapper">
-          <div className="field">
-            <Row />
-            <Row />
-            <Row />
-            <Row />
-            <Row />
-          </div>
-        </div>
+      <div className="field">
+        <Row />
+        <Row />
+        <Row />
+        <Row />
+        <Row />
       </div>
     </div>
   );
@@ -292,7 +288,7 @@ And add the following style
 }
 ```
 
-<img src="tutorial/change-row.gif" />
+<img src="change-row.gif" />
 
 Let's add more state to the application: We need the variable `data` which stores all inputted words in an array. And let's add these two helper functions that will help us later dealing with the state.
 
@@ -365,7 +361,7 @@ function Cell({ word, index }) {
 }
 ```
 
-<img src="tutorial/hello-world-crane.gif" />
+<img src="hello-world-crane.gif" />
 
 ## Validation
 
@@ -476,7 +472,7 @@ We need to add some style classes for the states. I again got inspired by someth
 
 The only problem is that we can see which field is correct the moment we input it. We should only be able to see it after we pressed on enter.
 
-<img src="tutorial/problem-with-colored-fields.png" />
+<img src="problem-with-colored-fields.png" />
 
 To fix that let's make sure to only pass in the word to guess to a row when the current row is larger.
 
@@ -513,12 +509,12 @@ function getDefaultButtonTheme() {
 const [buttonTheme, setButtonTheme] = useState(getDefaultButtonTheme());
 ```
 
-```html
+```js
 <Keyboard
-  layout="{keyboardLayout}"
-  display="{keyboardDisplay}"
-  onKeyPress="{keyboardPressed}"
-  buttonTheme="{buttonTheme}"
+  layout={keyboardLayout}
+  display={keyboardDisplay}
+  onKeyPress={keyboardPressed}
+  buttonTheme={buttonTheme}
 >
   {JSON.stringify(buttonTheme)}
 </Keyboard>
@@ -573,7 +569,7 @@ buttonTheme[2].buttons.split(" ").forEach((letter) => {
 });
 ```
 
-<img src="tutorial/colored-keyboard.gif" />
+<img src="colored-keyboard.gif" />
 
 ## Win detection
 
@@ -596,7 +592,7 @@ if (row === 4) {
 }
 ```
 
-<img src="tutorial/lose-game.gif" />
+<img src="lose-game.gif" />
 
 ## Improvements
 
